@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传奇耐扫王</title>
+    <link rel="stylesheet" href="tutorial.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        #minefield {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(8, 80px);
+        grid-template-rows: repeat(8, 80px);
+        gap: 1px;
+        }
+        .cell {
+        width: 80px;
+        height: 80px;
+        background-color: #ccc;
+        border: 1px solid #999;
+        cursor: pointer;
+        }
+        .highlight {
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        这个改版将扫雷的检测范围由3×3改为了5×5，也就是说，你将能在周围的24个格子里探测雷。<br>
+        同时，你将有更多的机会发现雷，因为你将有更多的格子可以探测。<br>
+        🚩使用鼠标右键可以标记/取消标记雷。<br>
+        使用鼠标左键可以打开格子，如果打开的格子是雷，则游戏结束。<br>
+        黄色高亮格子你鼠标所在格子的检测范围，格子上的数字表示该格子的检测范围内有多少雷。<br>
+    </h2>
+    <div>
+        <a href="./minesweeper.html">
+            <button class="mode-button">返回</button>
+        </a>
+    </div>
+    <div id="minefield" class="minefield"></div>
+    <script src="tutorial.js"></script>
+</body>
+</html>
